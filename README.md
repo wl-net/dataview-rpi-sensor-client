@@ -15,3 +15,7 @@ Dataview currently uses hyperlink references, which means that the POST to the R
 echo '{"temperature": "22.0", "humidity": "36.0"}' | python3 client.py --host http://dataview.restricted.wl-net.net/api/1 \
 --certificate cert.pem "temperature=/sensor/1/" "humidity=/sensor/2/"
 ```
+
+The values for sensor in this example are http://dataview.restricted.wl-net.net/api/1/sensor/1/ and http://dataview.restricted.wl-net.net/api/1/sensor/2/, respectively.
+
+NOTE: this scheme does not allow for sensors to be scoped outside of the same endpoint as sensor-values.
