@@ -21,6 +21,6 @@ for line in sys.stdin:
 
     for i in j:
         if i in mappings:
-            rc.create_model("sensor-value", {'sensor': mappings[i], 'value': j[i]})
+            rc.create_model("sensor-value", {'sensor': args.host + mappings[i], 'value': j[i]})
         else:
             print("Skipped " + i + ": no mapping found.")
