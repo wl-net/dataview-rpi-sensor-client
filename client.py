@@ -14,7 +14,7 @@ for mapping in args.mappings:
     m = mapping.split('=')
     mappings[m[0]] = m[1]
 
-rc = DataViewRestClient(args.host, os.environ.get('RPCSERVER_TOKEN'), args.certificate)
+rc = DataViewRestClient(args.host, os.environ.get('API_TOKEN'), args.certificate)
 
 for line in sys.stdin:
     j = json.loads(line)
